@@ -1,0 +1,381 @@
+html{
+  box-sizing: border-box;
+}
+*,*::before, *::after{
+  box-sizing: inherit;
+}
+body{
+  font-family:'Open Sans', sans-serif;;
+  font-style: normal;
+  color:#000000;
+}
+
+
+.item{
+  background-color: #fff;
+}
+.container{
+ max-width: 375px;
+ margin: 0 auto;
+ padding: 0px 17px;
+}
+.item__inner{
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid #828282;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  z-index: 2;
+}
+.item__inner-img{
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.item-1 .item__inner-img{
+  width: 339px;
+  height: 220px;
+  background-image: url(../images/sankt-peterburg-piter-st-3495.png);
+}
+.item-2 .item__inner-img{
+  width: 339px;
+  height: 284px;
+  background-image: url(../images/sankt-peterburg-piter-st-3496.png);
+}
+.item-1 .item__inner::before,
+.item-2 .item__inner::before{
+  position: absolute;
+  content: 'НОВИНКА';
+  margin-left: -1px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.item-1 .item__inner::before{
+  top: 41px;
+  left: 0;
+  background-color: #FED74B;
+  width: 99px;
+  height: 35px;
+  font-size: 12px;
+  color: #3E3E3E;
+}
+.item-2 .item__inner::before{
+  top: 0px;
+  left: 0;
+  background-color: #7553FF;
+  width: 129px;
+  height: 43px;
+  border-radius: 15px 0px 12px;
+  margin-top: -1px;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.item__inner-description{
+  padding: 0 12px;
+  z-index: 5;
+}
+.description__title{
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #404040;
+  padding-top: 47px;
+  margin-bottom: 15px;
+}
+.title-2{
+  display: none;
+}
+.title-1 span{
+  text-transform: uppercase;
+}
+.description__title::before{
+  content: '2 часа';
+  position: absolute;
+  background-image: url(../images/clock.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  top: 16px;
+  text-align: right;
+  width: 55px;
+  color: #9E9E9E;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.description__list> li{
+  position: relative;
+  padding-left: 33px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #4B4B4B;
+}
+.description__list> li + li{
+  margin-top: 11px;
+}
+.description__list>li::before{
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 12px;
+  top: 4px;
+  left: 0;
+  background-image: url(../images/check-mark.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.description__time{
+  padding-top: 7px;
+  padding-right: 8px;
+  margin-bottom: 35px;
+}
+.description__time li{
+  display: inline-block;
+  height: 24px;
+  width: 64px;
+  border-radius: 11px;
+  background-color: #D9E8FF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.description__price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 7px;
+  margin-bottom: 19px;
+}
+.price{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+}
+.price__main-inner{
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 20px;
+  position: relative;
+  padding-right: 25px;
+}
+.price__main-inner::after{
+  position: absolute;
+  content: '';
+  width: 18px;
+  height: 100%;
+  right: 0;
+  background-image: url(../images/Vector.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.price__pier{
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.item-2 .price__pier{
+  line-height: 12px;
+  margin-top: 5px;
+}
+.price-1{
+  display: inline;
+}
+.price-2{
+  display: none;
+}
+.btn{
+  width: 165px;
+  height: 44px;
+  background-color: #FED74B;
+  border-radius: 20px;
+  border: 0.5px solid #CBA500;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #404040;
+}
+.item-2 .btn{
+  border-radius: 10px;
+  width: 193px;
+  height: 44px;
+  font-weight: 600;
+}
+.item-3{
+  display: none;
+}
+
+
+ @media (min-width: 768px) {
+   
+   .container{
+     min-width: 768px;
+   }
+  .item__inner{
+    display: flex;
+  }
+  .item-1 .item__inner-img,
+  .item-2 .item__inner-img{
+    height: auto;
+    width: 50%;
+    border-radius: 15px 0 0 15px;
+  }
+  .item__inner-description{
+    width: 50%;
+  }
+  .description__title{
+    padding-top: 16px;
+    padding-bottom: 47px;
+    margin-bottom: 0;
+  }
+  .description__title::before{
+    top: 70px;
+  }
+}
+@media (min-width: 1070px){
+  .container{
+     max-width: 1106px;
+   }
+   .item-3{
+     display: block;
+   }
+   .item__inner-img{
+     min-width: 473px;
+     height: 369px;
+   }
+   .item-1 .item__inner-img{
+     background-image: url(../images/AdobeStock_168443825\ 1.png);
+   }
+   .item-2 .item__inner-img{
+    background-image: url(../images/ekskursii-po-spb-na-avtobuse\ 1.png);
+     max-width: 473px;
+   }
+   .item-3 .item__inner-img{
+     background-image: url(../images/music\ 1.png);
+   }
+   .title-1{
+     display: none;
+   }
+   .title-2{
+     display: inline;
+     font-size: 24px;
+     font-weight: 400;
+     line-height: 24px;
+   }
+  .item-1 .item__inner::before{
+    top: 41px;
+    width: 154px;
+    height: 42px;
+    background-color: #099CE8;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #ffffff;
+  }
+  .item-2 .item__inner::before{
+    content: 'КРУГЛЫЙ ГОД';
+    top: 59px;
+    width: 180px;
+    height: 45px;
+    background-color: #FFD83B;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #ffffff;
+    border-radius: 0px;
+  }
+  .description__title::before{
+    font-size: 14px;
+    width: 65px;
+    top: 82px;
+  }
+  .description__list{
+    margin-bottom: 60px;
+  }
+  .description__list>li{
+    font-size: 18px;
+    color: #343434;
+  }
+  .item__inner-description {
+    width: auto;
+  }
+  .description__list>li{
+    position: relative;
+  }
+  .description__time{
+    display: inline;
+    position: absolute;
+    padding-top: 2px;
+    padding-left: 5px;
+    font-size: 16px;
+     padding-right: 0;
+  }
+  .description__time li{
+    height: 28px;
+    width: 73px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .item-1 .description__time>li:last-child{
+    display: none;
+  }
+  .description__time>li:hover{
+    background-color: #6BA6FF;
+    color: #fff;
+  }
+  .description__price{
+    justify-content: start;
+  }
+  .price__main-inner{
+    font-size: 36px;
+    line-height: 25px;
+  }
+  .price__pier{
+    font-size: 14px;
+  }
+  .btn,
+  .item-2 .btn{
+    width: 187px;
+    height: 52px;
+    border-radius: 23px;
+    margin-left: 10px;
+    line-height: 20px;
+    font-size: 18px;
+    color: #292929;
+    background-color: #FFD83C;
+    border: 0.5px solid #FFD83C;
+    font-weight: 400;
+  }
+  .price-1{
+    display: none;
+  }
+  .price-2{
+    display: inline;
+  }
+  .item-3 .description__time>li:last-child{
+    position: relative;
+  }
+  .time{
+    position: absolute;
+    left: -415px;
+    top: 40px;
+    display: none;
+    color: #000;
+  }
+  .time li + li{
+    margin-left: 10px;
+  }
+  .item-3 .description__time>li:last-child:hover .time{
+    display: flex;
+  }
+}
