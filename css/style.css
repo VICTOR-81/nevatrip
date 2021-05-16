@@ -35,7 +35,7 @@ body{
   z-index: 1;
 }
 .item-1 .item__inner-img{
-  max-width: 339px;
+  max-width: auto;
   height: 220px;
   background-image: url(../images/sankt-peterburg-piter-st-3495.png);
 }
