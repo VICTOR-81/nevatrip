@@ -39,7 +39,7 @@ body{
   height: 220px;
 }
 .item-2 img{
-  width: 339px;
+  width: 100%;
   height: 284px;
 }
 .item-1 .item__inner::before,
