@@ -34,15 +34,13 @@ body{
   background-size: cover;
   z-index: 1;
 }
-.item-1 .item__inner-img{
-  width: auto;
+.item-1 img{
+  width: 100%;
   height: 220px;
-  background-image: url(../images/sankt-peterburg-piter-st-3495.png);
 }
-.item-2 .item__inner-img{
+.item-2 img{
   width: 339px;
   height: 284px;
-  background-image: url(../images/sankt-peterburg-piter-st-3496.png);
 }
 .item-1 .item__inner::before,
 .item-2 .item__inner::before{
@@ -224,11 +222,20 @@ body{
   .item__inner{
     display: flex;
   }
+  img{
+    display: none;
+  }
   .item-1 .item__inner-img,
   .item-2 .item__inner-img{
     height: auto;
     width: 50%;
     border-radius: 15px 0 0 15px;
+  }
+  .item-1 .item__inner-img{
+    background-image: url(../images/sankt-peterburg-piter-st-3495.png);
+  }
+  .item-2 .item__inner-img{
+    background-image: url(../images/sankt-peterburg-piter-st-3496.png);
   }
   .item__inner-description{
     width: 50%;
